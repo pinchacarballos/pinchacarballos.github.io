@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MariDavilaboda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Poppins:wght@200;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0 20px;
+  font-family: 'Quicksand', sans-serif;
+      background-color: #7E212A;
+      color: #fdfdfd;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+   h2 {
+      font-family: 'Cookie';
+	  font-weight: lighter;
+  font-size: 3.4rem;
+}
+	
+
+    .countdown {
+      font-size: 1.6rem;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .countdown div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .countdown span {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .label {
+      font-size: 2rem;
+      color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+<div class="content">
+  <h2>#MariDaviLaBoda</h2>
+
+  <div class="countdown" id="countdown">
+    <div><span id="days">0</span><span class="label">días</span></div>
+    <div><span id="hours">0</span><span class="label">horas</span></div>
+    <div><span id="minutes">0</span><span class="label">min</span></div>
+	<div><span id="seconds">0</span><span class="label">seg</span></div>
+  </div>
+ </div>
+
+  <script>
+    const countdown = () => {
+      const endDate = new Date("2025-10-18T12:30:00");
+      const now = new Date();
+      const diff = endDate - now;
+
+      if (diff <= 0) {
+        document.getElementById("countdown").innerHTML = "¡Ya está disponible!";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+	    const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+	    document.getElementById("seconds").textContent = seconds;
+    };
+
+    countdown();
+    setInterval(countdown, 500);
+  </script>
+</body>
+</html>
