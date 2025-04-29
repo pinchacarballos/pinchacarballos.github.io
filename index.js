@@ -31,7 +31,7 @@ document.getElementById('rsvp-form').addEventListener('submit', async function (
 e.preventDefault();
 const form = e.target;
 const data = new FormData(form);
-const url = 'https://script.google.com/macros/s/AKfycbzB-DTKISdLGZZDFdfMGkHjxyVac3FXNU6TkIXRFDfWcHzLO-WUlvAreSH3eUtk2pco/exec';
+const url = 'https://script.google.com/macros/library/d/1uPm02po4jPYzobsycjzYH1q7_cNBzcxKM5mgHMwWi3KkHv3QIifpKXQA/1';
 try {
 const response = await fetch(url, { method: 'POST', body: data });
 if (response.ok) {
