@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0 20px;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #7E212A;
+  color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Bonheur Royale", cursive;
+  font-weight: lighter;
+  font-size: 3.4rem;
+}
+	
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.countdown {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.countdown div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.label {
+  font-size: 2rem;
+  color: #e0e0e0;
+  font-family: "Faculty Glyphic", sans-serif;
+}
+
+#days, #hours, #minutes, #seconds {
+  font-family: "Faculty Glyphic", sans-serif;
+}
+
+#confirm-button {
+  font-family: "Bonheur Royale", cursive;
+  font-size: 2.5rem;
+  background-color: #4f141a;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  padding: 0 1rem;
+}
+
+#confirm-button:hover {
+  background-color: #217e75;
+}
+
+#confirm-button:active  {
+  transition: background-color 0s ease;
+  background-color: #4f141a;
+}
+
+#popup {
+  position:fixed; 
+  top:0; 
+  left:0; 
+  width:100%; 
+  height:100%; 
+  flex-direction:column; 
+  padding:1.5rem; 
+  z-index:1000; 
+  overflow-y:auto;
+  background-color: #7E212A;
+}
+
+#rsvp-form {
+  display: flex; 
+  flex-direction: column;
+}
