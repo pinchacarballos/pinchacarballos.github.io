@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0 20px;
   font-family: 'Quicksand', sans-serif;
-  background-color: #7E212A;
+  background-color: #0000007a;
   color: #fdfdfd;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,11 @@ body {
   justify-content: center;
   height: 100vh;
   text-align: center;
+  background-image: url('./assets/img/mariDavi1.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-size: cover;
 }
 
 h2 {
@@ -54,21 +59,7 @@ h2 {
 
 #confirm-button {
   font-family: "Bonheur Royale", cursive;
-  font-size: 2.5rem;
-  background-color: #4f141a;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-  padding: 0 1rem;
-}
-
-#confirm-button:hover {
-  background-color: #217e75;
-}
-
-#confirm-button:active  {
-  transition: background-color 0s ease;
-  background-color: #4f141a;
+  font-size: 40px;
 }
 
 #popup {
@@ -87,4 +78,286 @@ h2 {
 #rsvp-form {
   display: flex; 
   flex-direction: column;
+  gap: 24px;
+}
+
+.input-material {
+  position: relative;
+  margin-bottom: 1.5rem;
+  background-color: #4f141a;
+}
+
+.input-material input {
+  border: none;
+  border-bottom: 1px solid #fdfdfd; /* Línea inferior gris */
+  display: block;
+  font-size: 1rem;
+  padding: 24px 24px 4px 32px;
+  width: 100%;
+  background: transparent;
+  color: #fdfdfd;
+  font-family: "Faculty Glyphic", sans-serif;
+}
+
+.input-material input:focus {
+  outline: none;
+  border-bottom: 2px solid #fdfdfd;
+}
+
+.input-material label {
+  color: #217e75; /* Texto de la etiqueta */
+  font-size: 1rem;
+  position: absolute;
+  top: 24px;
+  padding-left: 32px;
+  left: 0;
+  transition: 0.2s ease all;
+  pointer-events: none;
+  font-family: "Faculty Glyphic", sans-serif;
+}
+
+/* Estilo de la etiqueta cuando el input tiene foco o tiene contenido */
+.input-material.focused label,
+.input-material.filled label {
+  font-size: 0.8rem;
+  top: 0rem;
+  color: #fdfdfd;
+  padding: 4px 0px 0px 16px;
+}
+
+/* Animación de la línea inferior al enfocar */
+.input-material .underline {
+  background-color: #fdfdfd;
+  display: block;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  transition: 0.2s ease all;
+}
+
+.input-material input:focus ~ .underline {
+  width: 100%;
+}
+
+.textarea-material {
+  position: relative;
+  margin-bottom: 1.5rem;
+  display: block;
+  background-color: #4f141a;
+}
+
+.textarea-material textarea {
+  border: none;
+  border-bottom: 1px solid #fdfdfd; /* Línea inferior gris */
+  display: block;
+  font-size: 1rem;
+  width: 100%;
+  background: transparent;
+  color: #fdfdfd; /* Texto principal */
+  resize: none; /* Opcional: evita que el usuario redimensione el textarea */
+  overflow: auto; /* Opcional: añade scroll si el contenido excede */
+  padding: 24px 24px 4px 32px;
+  font-family: "Faculty Glyphic", sans-serif;
+}
+
+.textarea-material textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #9e9e9e; /* Línea inferior azul al enfocar */
+}
+
+.textarea-material label {
+  color: #217e75; /* Texto de la etiqueta */
+  font-size: 1rem;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  transition: 0.2s ease all;
+  pointer-events: none;
+  padding-left: 32px;
+  font-family: "Faculty Glyphic", sans-serif;
+}
+
+/* Estilo de la etiqueta cuando el textarea tiene foco o tiene contenido */
+.textarea-material.focused label,
+.textarea-material.filled label {
+  font-size: 0.8rem;
+  top: 0rem;
+  color: #fdfdfd;
+  padding: 4px 0px 0px 16px;
+}
+
+/* Animación de la línea inferior al enfocar */
+.textarea-material .underline {
+  background-color: #fdfdfd;
+  display: block;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  transition: 0.2s ease all;
+}
+
+.textarea-material textarea:focus ~ .underline {
+  width: 100%;
+}
+
+
+.radio-material {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-material input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #9e9e9e;
+  border-radius: 50%;
+  outline: none;
+  margin: 0;
+  /* position: absolute;  <-- Comentar o eliminar */
+  opacity: 0;
+  cursor: pointer;
+  /* Hacer que ocupe el mismo espacio que el indicador para recibir clicks */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Asegurarse de que esté por encima del indicador para recibir clicks */
+}
+
+.radio-material label {
+  margin-left: 0.5rem;
+  color: #fdfdfd;
+  cursor: pointer;
+  padding-right: 8px;
+  font-family: "Faculty Glyphic", sans-serif;
+}
+
+.radio-material .radio-indicator {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #9e9e9e;
+  border-radius: 50%;
+  background-color: transparent;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+/* Estilo cuando el radio button está enfocado */
+.radio-material input[type="radio"]:focus + label + .radio-indicator,
+.radio-material input[type="radio"]:focus ~ .radio-indicator {
+  border-color: #fdfdfd; /* Borde azul al enfocar */
+}
+
+/* Estilo cuando el radio button está seleccionado */
+.radio-material input[type="radio"]:checked + label + .radio-indicator::before,
+.radio-material input[type="radio"]:checked ~ .radio-indicator::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #fdfdfd; /* Círculo interior azul al seleccionar */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Animación opcional para el círculo interior */
+.radio-material input[type="radio"]:checked + label + .radio-indicator::before,
+.radio-material input[type="radio"]:checked ~ .radio-indicator::before {
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.radio-material .radio-indicator::before {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.radio-group-material {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+  background-color: #4f141a;
+  padding: 24px 32px;
+  border-bottom: 1px solid #fdfdfd;
+}
+
+.button-material {
+  display: inline-block;
+  padding: 0px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  color: #fff; /* Color del texto */
+  background-color: #4f141a; /* Color primario (azul Material) */
+  border: none;
+  border-radius: 4px; /* Bordes ligeramente redondeados */
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+              0 3px 1px -2px rgba(0, 0, 0, 0.12),
+              0 1px 5px 0 rgba(0, 0, 0, 0.2); /* Elevación sutil */
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.button-material:hover {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+              0 1px 10px 0 rgba(0, 0, 0, 0.12),
+              0 2px 4px -1px rgba(0, 0, 0, 0.3); /* Elevación al hacer hover */
+  background-color: #738382; /* Ligeramente más oscuro al hacer hover */
+}
+
+.button-material:focus {
+  outline: none; /* Elimina el contorno predeterminado del navegador */
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12); /* Elevación al enfocar */
+}
+
+.button-material:active {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12); /* Mantiene la elevación al activar */
+  background-color: #4f141a; /* Aún más oscuro al activar */
+}
+
+#submit-form {
+  font-family: "Faculty Glyphic", sans-serif;
+  font-size: 28px;
+  padding: 10px 24px;
+}
+
+.radio-group-label {
+  font-family: "Faculty Glyphic", sans-serif;
+}
+
+.image-bottom {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.image-bottom img {
+  width: 75%;
+  border-radius: 4px;
+}
+
+#close-button {
+  align-self: flex-end; 
+  font-size:28px; 
+  background:none; 
+  border:none;
+  cursor: pointer;
 }

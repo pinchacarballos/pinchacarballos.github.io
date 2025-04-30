@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Poppins:wght@200;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Faculty+Glyphic&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 <body>
@@ -24,28 +25,72 @@
     <div><span id="seconds">0</span><span class="label">seg</span></div>
   </div>
   
-
+  
+  <button onclick="document.getElementById('popup').style.display='flex'" id="confirm-button" class="button-material">
+	Confirmar Asistencia
+   </button>
 	<div id="popup" style="display:none;">
-	  <button onclick="document.getElementById('popup').style.display='none'" style="align-self:flex-end; font-size:1.5rem; background:none; border:none;">x</button>
+	  <button onclick="document.getElementById('popup').style.display='none'" id="close-button">
+		<i class="fa-solid fa-xmark"></i>
+	  </button>
 	  <form id="rsvp-form">
-	    <label>1. ¿Quién eres? *</label>
-	    <input type="text" name="nombre" required>
-	    <label>2. ¿Acompañantes?</label>
-	    <input type="text" name="acompanantes">
-	    <label>3. ¿Usarás autobús?</label><br>
-	    <label><input type="radio" name="autobus" value="Sí" required> Sí</label>
-	    <label><input type="radio" name="autobus" value="No"> No</label>
-	    <label>4. ¿Tienes intolerancias alimentarias?</label><br>
-	    <label><input type="radio" name="intolerancias" value="Sí" required onchange="toggleIntolerancias(true)"> Sí</label>
-	    <label><input type="radio" name="intolerancias" value="No" onchange="toggleIntolerancias(false)"> No</label>
-	    <div id="intolerancias-texto" style="display:none;">
-	      <label>Especifica tus intolerancias *</label>
-	      <input type="text" name="detalle_intolerancias">
-	    </div>
-	    <label>5. Comentarios</label>
-	    <textarea name="comentarios"></textarea>
-	    <button type="submit" style="margin-top:1rem;">Enviar</button>
+	    <div class="input-material">
+			<input type="text" id="nombre" name="nombre">
+			<label for="nombre">Nombre</label>
+			<span class="underline"></span>
+		</div>
+		<div class="input-material">
+			<input type="text" id="nombre" name="acompanantes">
+			<label for="acompanantes">¿Acompañantes?</label>
+			<span class="underline"></span>
+		</div>
+		<div class="radio-group-material">
+			<label class="radio-group-label">¿Usarás autobús?</label>
+		  
+			<div class="radio-material">
+			  <input type="radio" id="opcionSi" name="autobus" value="Sí">
+			  <label for="opcionSi">Sí</label>
+			  <span class="radio-indicator"></span>
+			</div>
+		  
+			<div class="radio-material">
+			  <input type="radio" id="opcionNo" name="autobus" value="No">
+			  <label for="opcionNo">No</label>
+			  <span class="radio-indicator"></span>
+			</div>
+			<span class="underline"></span>
+		</div>
+		<div class="radio-group-material">
+			<label class="radio-group-label">¿Tienes intolerancias alimentarias?</label>
+		  
+			<div class="radio-material">
+			  <input type="radio" id="opcionSi" name="intolerancias" value="Sí" required onchange="toggleIntolerancias(true)">
+			  <label for="opcionSi">Sí</label>
+			  <span class="radio-indicator"></span>
+			</div>
+		  
+			<div class="radio-material">
+			  <input type="radio" id="opcionNo" name="intolerancias" value="No" onchange="toggleIntolerancias(false)">
+			  <label for="opcionNo">No</label>
+			  <span class="radio-indicator"></span>
+			</div>
+			<span class="underline"></span>
+		</div>
+		<div class="input-material" id="intolerancias-texto" style="display:none;">
+			<input type="text" id="detalle_intolerancias" name="detalle_intolerancias">
+			<label for="detalle_intolerancias">Especifica tus intolerancias *</label>
+			<span class="underline"></span>
+		</div>
+		<div class="textarea-material">
+			<textarea id="comentarios" name="comentarios"></textarea>
+			<label for="comentarios">Comentarios</label>
+			<span class="underline"></span>
+		</div>
+	    <button type="submit" class="button-material" id="submit-form">Enviar</button>
 	  </form>
+	  <div class="image-bottom">
+	  	<img src="./assets/img/mariDavi2.jpeg" />
+	  </div>
 	</div>
  </div>
 
