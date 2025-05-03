@@ -359,7 +359,7 @@ body {
   }
   .text {
     font-family: "Faculty Glyphic", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
@@ -395,9 +395,10 @@ body {
   padding: 32px;
   .title {
     font-family: "Faculty Glyphic", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 2px;
     padding: 16px 0 40px 0;
+    text-align: center;
   }
   .image {
     width: 20%;

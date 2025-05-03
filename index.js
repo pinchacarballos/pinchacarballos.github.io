@@ -19,7 +19,7 @@ const toggleIntolerancias = (mostrar) => {
 
 function copyToClipboard(elementId) {
     const textElement = document.getElementById(elementId);
-    const textToCopy = textElement.textContent;
+    const textToCopy = textElement.textContent.replace('IBAN', '').replace(/\s/g ,'');
 
     if (navigator.clipboard) {
       navigator.clipboard.writeText(textToCopy)
