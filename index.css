@@ -370,7 +370,8 @@ body {
 
   }
   .copy-button {
-    padding: none;
+    padding: 0 0 0 4px;
+    color: rgba(0, 0, 0, 0.54);
     cursor: pointer;
     border: none;
     background-color: transparent; 
