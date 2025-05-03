@@ -17,15 +17,35 @@ const toggleIntolerancias = (mostrar) => {
     campo.querySelector('input').required = mostrar;
 };
 
+function copyToClipboard(elementId) {
+    const textElement = document.getElementById(elementId);
+    const textToCopy = textElement.textContent;
+
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+          showToast('IBAN copiado al portapapeles');
+        })
+        .catch(err => {
+          console.error('Error al copiar al portapapeles:', err);
+          alert('No se pudo copiar el IBAN.');
+        });
+    } else {
+      const textArea = document.createElement("textarea");
+      textArea.value = textToCopy;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      alert('IBAN copiado al portapapeles');
+    }
+  }
+
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('rsvp-form')
     form.addEventListener('submit', async function (e) {
         e.preventDefault();
         const formData = new FormData(form);
-        const data = {}
-        for (var [key, value] of formData.entries()) { 
-            data[key] = value
-        }
         const url = 'https://script.google.com/macros/s/AKfycbxscxgntDQ-rhfpI26M7MnaVndDKqg1L05N4gmBpzslqq8TtlqqUFjE1oYixuacElVb/exec';
         try {
             const response = await fetch(url, { 
@@ -33,14 +53,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 body: formData,
                 redirect: 'follow'
             });
-            console.log(await response.text())
             if (response.ok) {
-                alert('Gracias por confirmar tu asistencia!');
+                showToast('Gracias por confirmar tu asistencia');
+                form.reset();
+                hideForm();
             } else {
-                alert('Error al enviar. Intenta más tarde.');
+                showToast('Error al enviar. Intenta más tarde.');
             }
         } catch (err) {
-            alert('Fallo de red. Intenta más tarde.');
+            showToast('Fallo de red. Intenta más tarde.');
         }
     });
 });

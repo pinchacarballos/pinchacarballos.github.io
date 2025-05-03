@@ -51,8 +51,30 @@ textareaMaterialElements.forEach(container => {
         }
     });
 
-    // Comprobación inicial por si el textarea ya tiene valor al cargar la página
     if (textarea.value) {
         container.classList.add('filled');
     }
 });
+
+function showToast(mensaje, accionTexto, accionCallback) {
+  const toast = document.getElementById('toast-container');
+  const mensajeElemento = toast.querySelector('.toast-message');
+  const accionBoton = toast.querySelector('.toast-action');
+
+  mensajeElemento.textContent = mensaje;
+
+  if (accionTexto && accionCallback) {
+    accionBoton.textContent = accionTexto;
+    accionBoton.style.display = 'inline-block';
+    accionBoton.onclick = accionCallback;
+  } else {
+    accionBoton.style.display = 'none';
+    accionBoton.onclick = null;
+  }
+
+  toast.classList.add('show');
+
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3000);
+}

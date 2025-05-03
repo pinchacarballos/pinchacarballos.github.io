@@ -38,35 +38,41 @@
 	</section>
 	<section class="section-3">
 		<span class="date">18/10/25</span>
-		<div class="icon">
-			<img class="image-icon" src="./assets/icons/iglesia.png" />
-		</div>
-		<span class="title">Ceremonia religiosa</span>
-		<span class="hour">12:45h</span>
-		<span class="location">Iglesia San Paio da Estrada</span>
-		<div class="location-button">
-			<button class="mat-button">Ver ubicación</button>
-		</div>
-		<div class="icon">
-			<img class="image-icon" src="./assets/icons/fiesta.png" />
-		</div>
-		<span class="title">Banquete y fiesta</span>
-		<span class="hour">14:30h</span>
-		<span class="location">Pazo A Toxeiriña</span>
-		<div class="location-button">
-			<button class="mat-button">Ver ubicación</button>
+		<div class="sections">
+			<div class="info">
+				<div class="icon">
+					<img class="image-icon" src="./assets/icons/iglesia.png" />
+				</div>
+				<span class="title">Ceremonia religiosa</span>
+				<span class="hour">12:45h</span>
+				<span class="location">Iglesia San Paio da Estrada</span>
+				<div class="location-button">
+					<a role="button" class="mat-button" href="https://maps.app.goo.gl/kf13pwKDWjj4VYok6" target="_blank">Ver ubicación</a>
+				</div>
+			</div>
+			<div class="info">
+				<div class="icon">
+					<img class="image-icon" src="./assets/icons/fiesta.png" />
+				</div>
+				<span class="title">Banquete y fiesta</span>
+				<span class="hour">14:30h</span>
+				<span class="location">Pazo A Toxeiriña</span>
+				<div class="location-button">
+					<a role="button" class="mat-button" href="https://maps.app.goo.gl/KWr6pmDUdyep3KbG7" target="_blank">Ver ubicación</a>
+				</div>
+			</div>
 		</div>
 	</section>
 	<section class="section-4">
 		<span class="title">Autobuses</span>
-		<span class="subtitle">Para que solo pienses en pasarlo bien</span>
+		<span class="subtitle">Para que sólo pienses en pasarlo bien</span>
 		<span class="text">desde Santiago a la iglesia a las 11:30h</span>
 		<span class="text">desde la iglesia al pazo</span>
-		<span class="text">desde el pazo a Santiago 0:00h y 4:00h</span>
+		<span class="text">desde el pazo a Santiago X:XXh y X:XXh</span>
 	</section>
 	<section class="section-5">
 		<span class="title">Si vienes de lejos</span>
-		<span class="text">Santiago de Compostela está muy bien comunicado mediante tren o avión. Te recomendamos viajar allí, pues la oferta de alojamientos es amplia, y los autobuses saldrán y llegarán allí</span>
+		<span class="text">Santiago de Compostela está muy bien comunicado mediante tren o avión.<br/> <br/>Te recomendamos viajar allí, pues la oferta de alojamientos es amplia, y los autobuses saldrán y llegarán allí</span>
 		<span class="subtitle"> Es nuestro centro de operaciones</span>
 	</section>
 	<section class="section-6">
@@ -75,32 +81,32 @@
 			<div class="carousel-slide">
 				<img src="./assets/img/hotel-map.jpeg" alt="Imagen 1">
 				<span class="hotel-name">Hotel Plaza Obradoiro</span>
-				<button class="mat-button">Ver Hotel</button>
+				<a role="button" class="mat-button" href="https://maps.app.goo.gl/RURgZgZBcUtQ2XpE8" target="_blank">Ver hotel</a>
 			</div>
 			<div class="carousel-slide">
 				<img src="./assets/img/hotel-map.jpeg" alt="Imagen 1">
 				<span class="hotel-name">Hotel Costa Vella</span>
-				<button class="mat-button">Ver Hotel</button>
+				<a role="button" class="mat-button" href="https://maps.app.goo.gl/qtXGr8Ds61ScmDd37" target="_blank">Ver hotel</a>
 			</div>
 			<div class="carousel-slide">
 				<img src="./assets/img/hotel-map.jpeg" alt="Imagen 1">
 				<span class="hotel-name">Gran Hotel Los Abetos</span>
-				<button class="mat-button">Ver Hotel</button>
+				<a role="button" button class="mat-button" href="https://maps.app.goo.gl/waznX38jpxS84EuD6" target="_blank">Ver hotel</a>
 			</div>
 			<div class="carousel-slide">
 				<img src="./assets/img/hotel-map.jpeg" alt="Imagen 1">
 				<span class="hotel-name">San Francisco Hotel Monumento</span>
-				<button class="mat-button">Ver Hotel</button>
+				<a role="button" button class="mat-button" href="https://maps.app.goo.gl/Qm6C3t26EUMzSiPm9" target="_blank">Ver hotel</a>
 			</div>
 			<div class="carousel-slide">
 				<img src="./assets/img/hotel-map.jpeg" alt="Imagen 1">
 				<span class="hotel-name">Eurostars San Lázaro</span>
-				<button class="mat-button">Ver Hotel</button>
+				<a role="button" button class="mat-button" href="https://maps.app.goo.gl/zSciPgQheUEpYjQo7" target="_blank">Ver hotel</a>
 			</div>
 			<div class="carousel-slide">
 				<img src="./assets/img/hotel-map.jpeg" alt="Imagen 1">
 				<span class="hotel-name">Hostal de los Reyes Católicos</span>
-				<button class="mat-button">Ver Hotel</button>
+				<a role="button" button class="mat-button" href="https://maps.app.goo.gl/ndjZb7GNbw6XzHJ69 " target="_blank">Ver hotel</a>
 			</div>
 			<button class="prev-button">&#10094;</button>
 			<button class="next-button">&#10095;</button>
@@ -118,22 +124,32 @@
 	<section class="section-7">
 		<span class="title">Regalo</span>
 		<span class="subtitle">Pasar este día contigo<br/>ya es un gran regalo</span>
-		<span class="text">Iban XX00 0000 0000 0000 0000 0000</span>
+		<div class="iban">
+			<span class="text" id="ibanText">Iban XX00 0000 0000 0000 0000 0000</span>
+			<button class="copy-button" onclick="copyToClipboard('ibanText')">
+				<i class="fa-regular fa-clipboard"></i> 
+			</button>
+		</div>
 	</section>
 	<section class="section-8">
 		<img class="image" src="./assets/icons/flower.png" />
 		<span class="title">Esperamos que puedas acompañarnos</span>
 		<button class="mat-button-solid" onclick="showForm()">Confirma tu asistencia</button>
+	</section>
+
+	<section class="section-9">
+		<span class="title">Feito con amor dende Galiza <i class="fas fa-heart"></i></span>
 	</section>  
   </div>
  
   <div id="popup" style="display:none;">
 	<div class="popup-content">
-		<div class="close-button">
+		<div class="header">
+			<span class="title">Confirma tu asistencia</span>
 			<button onclick="hideForm()" class="icon-button">
 				<i class="fa-solid fa-xmark"></i>
 			</button>
-		</div>
+		</div>			
 		<form id="rsvp-form">
 			<div class="input-material">
 				<input type="text" id="nombre" name="nombre">
@@ -185,15 +201,19 @@
 				<textarea id="comentarios" name="comentarios" rows="3"></textarea>
 				<label for="comentarios">Comentarios</label>
 			</div>
-			<button type="submit" class="mat-button-solid">Confirmar</button>
+			<button type="submit" class="mat-button-solid">Enviar</button>
 		</form>
 	</div>
   </div>
 
+  <div id="toast-container" class="toast">
+	<span class="toast-message"></span>
+	<button class="toast-action"></button>
+  </div>
 
-  <script type="text/javascript" src="./index.js"></script>
   <script type="text/javascript" src="./countdown.js"></script>
   <script type="text/javascript" src="./slider.js"></script>
   <script type="text/javascript" src="./material.js"></script>
+  <script type="text/javascript" src="./index.js"></script>
 </body>
 </html>

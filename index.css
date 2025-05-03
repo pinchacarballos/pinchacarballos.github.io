@@ -30,9 +30,24 @@ body {
     flex-direction:column; 
     padding: 16px;
     gap: 16px;
-    .close-button {
+    .header {
       display: flex;
-      justify-content: end;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      .title {
+        font-family: "Faculty Glyphic", sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        color: var(--text);
+      }
+      i {
+        color: var(--text);
+      }
+    }
+    .radio-material input[type="radio"]:checked + label + .radio-indicator::before {
+      background-color: var(--text);
     }
   }
 }
@@ -49,11 +64,11 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: var(--background);
-  padding: 32px 16px;
+  padding: 32px 16px 0px 16px;
   .title {
     text-transform: uppercase;
     width: 100%;
-    font-size: 32px;
+    font-size: 30px;
     line-height: 62px;
     text-align: center;
     font-family: "Faculty Glyphic", sans-serif;
@@ -78,6 +93,9 @@ body {
   gap: 32px;
   .photo {
     width: 100%;
+    max-height: 800px;
+    object-fit: cover;
+    object-position: 100% 55%;
   }
   .countdown {
     font-family: "Faculty Glyphic", sans-serif;
@@ -90,7 +108,7 @@ body {
       flex-direction: column;
       align-items: center;
       .label {
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-weight: bold;
         font-family: "Faculty Glyphic", sans-serif;
         color: var(--text);
@@ -105,40 +123,60 @@ body {
   align-items: center;
   background-color: var(--background);
   .date {
+    display: flex;
     padding: 24px 0;
     font-family: "Bonheur Royale", cursive;
     font-size: 48px;
     color: var(--text);
   }
-  .title {
-    font-family: "Faculty Glyphic", sans-serif;
-    padding: 24px 0;
-    font-size: 28px;
-    color: var(--text);
-  }
-  .hour {
-    font-family: "Faculty Glyphic", sans-serif;
-    font-size: 28px;
-    color: var(--text);
-  }
-  .location {
-    font-family: "Faculty Glyphic", sans-serif;
-    font-size: 18px;
-    color: var(--text);
-    letter-spacing: 4px;
-    width: 50%;
-    text-align: center;
-    padding: 16px;
-  }
-  .icon {
+  .sections {
     display: flex;
-    justify-content: center;
-    .image-icon {
-      width: 25%;
+    flex-direction: column;
+    @media(min-width: 600px) {
+      flex-direction: row;
+      justify-content: center;
     }
-  }
-  .location-button {
-    padding-bottom: 60px;
+    .info {
+      width: 100%;
+      @media(min-width: 600px) {
+        width: 50%;
+      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .title {
+        font-family: "Faculty Glyphic", sans-serif;
+        padding: 24px 0;
+        font-size: 28px;
+        color: var(--text);
+      }
+      .hour {
+        font-family: "Faculty Glyphic", sans-serif;
+        font-size: 28px;
+        color: var(--text);
+      }
+      .location {
+        font-family: "Faculty Glyphic", sans-serif;
+        font-size: 18px;
+        color: var(--text);
+        letter-spacing: 4px;
+        width: 50%;
+        text-align: center;
+        padding: 16px;
+        width: 90%;
+      }
+      .icon {
+        display: flex;
+        justify-content: center;
+        max-height: 125px;
+        .image-icon {
+          width: 25%;
+        }
+      }
+      .location-button {
+        padding-bottom: 60px;
+      }
+    }
   }
 }
 .section-4 {
@@ -150,7 +188,7 @@ body {
   .title {
     font-family: "Faculty Glyphic", sans-serif;
     color: var(--background);
-    font-size: 32px;
+    font-size: 24px;
     padding-top: 28px;
     text-transform: uppercase;
     letter-spacing: 8px;
@@ -167,6 +205,7 @@ body {
     font-family: "Faculty Glyphic", sans-serif;
     color: var(--background);
     letter-spacing: 2px;
+    font-size: smaller;
   }
 }
 
@@ -307,7 +346,7 @@ body {
   background-color: var(--secondary);
   .title {
     font-family: "Faculty Glyphic", sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 8px;
   }
@@ -323,7 +362,29 @@ body {
     font-size: 16px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding: 16px;
+  }
+   .iban {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+
+  }
+  .copy-button {
+    padding: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent; 
+  }
+   .copy-button i {
+    font-size: 1.2em;
+     color: inherit;
+  }
+  .copy-button:hover {
+    opacity: 0.7; 
+  }
+
+  .copy-button:active {
+    opacity: 0.9; 
   }
 }
 
@@ -339,6 +400,19 @@ body {
     padding: 16px 0 40px 0;
   }
   .image {
-    width: 30%;
+    width: 20%;
+    max-width: 150px;
   }
+}
+
+.section-9 {
+  margin-top: 2rem;
+  padding-bottom: 6px;
+  font-family: "Faculty Glyphic", sans-serif;
+  font-size: 5px;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.6; 
 }

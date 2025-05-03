@@ -299,3 +299,63 @@
 
 /*MATERIAL ICON BUTTON--------------------------------------------------------------------------------*/
 
+/*MATERIAL TOAST--------------------------------------------------------------------------------------*/
+
+.toast {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #323232;
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+              0 3px 1px -2px rgba(0, 0, 0, 0.12),
+              0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+}
+
+.toast.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out, visibility 0s 0s;
+}
+
+.toast-message {
+  flex-grow: 1;
+  font-family: "Faculty Glyphic", sans-serif;
+  font-size: 16px;
+}
+
+.toast-action {
+  background-color: transparent;
+  color: #bb86fc;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  outline: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.toast-action:hover {
+  opacity: 0.8;
+}
+
+.toast-action:focus {
+  outline: 2px solid #bb86fc;
+  outline-offset: 2px;
+}
+
+/*MATERIAL TOAST--------------------------------------------------------------------------------------*/
