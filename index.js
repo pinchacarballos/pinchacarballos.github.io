@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 form.reset();
                 hideForm();
             } else {
-                showToast('Error al enviar. Intenta más tarde.');
+                showToast('Error al enviar. Intentalo de nuevo más tarde.');
             }
         } catch (err) {
             showToast('Fallo de red. Intenta más tarde.');
