@@ -5,93 +5,195 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MariDavilaboda</title>
   <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./material.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Poppins:wght@200;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Faculty+Glyphic&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
-<body>
+<body id="body">
 <div class="content">
-  <h2>#MariDaviLaBoda</h2>
-  
-  <div class="countdown" id="countdown">
-    <div><span id="days">0</span><span class="label">días</span></div>
-    <div><span id="hours">0</span><span class="label">horas</span></div>
-    <div><span id="minutes">0</span><span class="label">min</span></div>
-    <div><span id="seconds">0</span><span class="label">seg</span></div>
-  </div>
-  
-  
+	<section class="section-1">
+		<div class="title">
+			Un amor de verano que se nos ha ido de las manos
+		</div>
+		<span class="hastag">#maridavilaboda</span>
+		<span class="hastag">#dimequemequieres</span>
+		<div class="confirm-container">
+			<button onclick="showForm()" class="mat-button" id="confirm-button">
+				Confirma tu asistencia
+	  		</button>
+		</div>
+	</section>
+	<section class="section-2">
+		<div class="countdown" id="countdown">
+			<div><span class="label" id="days">0</span><span class="label">días</span></div>
+			<div><span class="label" id="hours">0</span><span class="label">horas</span></div>
+			<div><span class="label" id="minutes">0</span><span class="label">min</span></div>
+			<div><span class="label" id="seconds">0</span><span class="label">seg</span></div>
+		</div>
+		<img class="photo" src="./assets/img/mariDavi1.jpeg" />
+	</section>
+	<section class="section-3">
+		<span class="date">18/10/25</span>
+		<div class="icon">
+			<img class="image-icon" src="./assets/icons/iglesia.png" />
+		</div>
+		<span class="title">Ceremonia religiosa</span>
+		<span class="hour">12:45h</span>
+		<span class="location">Iglesia San Paio da Estrada</span>
+		<div class="location-button">
+			<button class="mat-button">Ver ubicación</button>
+		</div>
+		<div class="icon">
+			<img class="image-icon" src="./assets/icons/fiesta.png" />
+		</div>
+		<span class="title">Banquete y fiesta</span>
+		<span class="hour">14:30h</span>
+		<span class="location">Pazo A Toxeiriña</span>
+		<div class="location-button">
+			<button class="mat-button">Ver ubicación</button>
+		</div>
+	</section>
+	<section class="section-4">
+		<span class="title">Autobuses</span>
+		<span class="subtitle">Para que solo pienses en pasarlo bien</span>
+		<span class="text">desde Santiago a la iglesia a las 11:30h</span>
+		<span class="text">desde la iglesia al pazo</span>
+		<span class="text">desde el pazo a Santiago 0:00h y 4:00h</span>
+	</section>
+	<section class="section-5">
+		<span class="title">Si vienes de lejos</span>
+		<span class="text">Santiago de Compostela está muy bien comunicado mediante tren o avión. Te recomendamos viajar allí, pues la oferta de alojamientos es amplia, y los autobuses saldrán y llegarán allí</span>
+		<span class="subtitle"> Es nuestro centro de operaciones</span>
+	</section>
+	<section class="section-6">
+		<span class="title">Alojamientos</span>
+		<div class="carousel-container">
+			<div class="carousel-slide">
+				<img src="./assets/img/hotel-map.jpeg" alt="Imagen 1">
+				<span class="hotel-name">Hotel Plaza Obradoiro</span>
+				<button class="mat-button">Ver Hotel</button>
+			</div>
+			<div class="carousel-slide">
+				<img src="./assets/img/hotel-map.jpeg" alt="Imagen 1">
+				<span class="hotel-name">Hotel Costa Vella</span>
+				<button class="mat-button">Ver Hotel</button>
+			</div>
+			<div class="carousel-slide">
+				<img src="./assets/img/hotel-map.jpeg" alt="Imagen 1">
+				<span class="hotel-name">Gran Hotel Los Abetos</span>
+				<button class="mat-button">Ver Hotel</button>
+			</div>
+			<div class="carousel-slide">
+				<img src="./assets/img/hotel-map.jpeg" alt="Imagen 1">
+				<span class="hotel-name">San Francisco Hotel Monumento</span>
+				<button class="mat-button">Ver Hotel</button>
+			</div>
+			<div class="carousel-slide">
+				<img src="./assets/img/hotel-map.jpeg" alt="Imagen 1">
+				<span class="hotel-name">Eurostars San Lázaro</span>
+				<button class="mat-button">Ver Hotel</button>
+			</div>
+			<div class="carousel-slide">
+				<img src="./assets/img/hotel-map.jpeg" alt="Imagen 1">
+				<span class="hotel-name">Hostal de los Reyes Católicos</span>
+				<button class="mat-button">Ver Hotel</button>
+			</div>
+			<button class="prev-button">&#10094;</button>
+			<button class="next-button">&#10095;</button>
 
-	<div id="popup" style="display:none;">
-	  <button onclick="document.getElementById('popup').style.display='none'" id="close-button">
-		<i class="fa-solid fa-xmark"></i>
-	  </button>
-	  <form id="rsvp-form">
-	    <div class="input-material">
-			<input type="text" id="nombre" name="nombre">
-			<label for="nombre">Nombre</label>
-			<span class="underline"></span>
+			<!-- <div class="carousel-indicators">
+				<button class="indicator active"></button>
+				<button class="indicator"></button>
+				<button class="indicator"></button>
+				<button class="indicator"></button>
+				<button class="indicator"></button>
+				<button class="indicator"></button>
+			</div> -->
 		</div>
-		<div class="input-material">
-			<input type="text" id="nombre" name="acompanantes">
-			<label for="acompanantes">¿Acompañantes?</label>
-			<span class="underline"></span>
+	</section>
+	<section class="section-7">
+		<span class="title">Regalo</span>
+		<span class="subtitle">Pasar este día contigo<br/>ya es un gran regalo</span>
+		<span class="text">Iban XX00 0000 0000 0000 0000 0000</span>
+	</section>
+	<section class="section-8">
+		<img class="image" src="./assets/icons/flower.png" />
+		<span class="title">Esperamos que puedas acompañarnos</span>
+		<button class="mat-button-solid" onclick="showForm()">Confirma tu asistencia</button>
+	</section>  
+  </div>
+ 
+  <div id="popup" style="display:none;">
+	<div class="popup-content">
+		<div class="close-button">
+			<button onclick="hideForm()" class="icon-button">
+				<i class="fa-solid fa-xmark"></i>
+			</button>
 		</div>
-		<div class="radio-group-material">
-			<label class="radio-group-label">¿Usarás autobús?</label>
-		  
-			<div class="radio-material">
-			  <input type="radio" id="opcionSi" name="autobus" value="Sí">
-			  <label for="opcionSi">Sí</label>
-			  <span class="radio-indicator"></span>
+		<form id="rsvp-form">
+			<div class="input-material">
+				<input type="text" id="nombre" name="nombre">
+				<label for="nombre">Nombre</label>
 			</div>
-		  
-			<div class="radio-material">
-			  <input type="radio" id="opcionNo" name="autobus" value="No">
-			  <label for="opcionNo">No</label>
-			  <span class="radio-indicator"></span>
+			<div class="input-material">
+				<input type="text" id="nombre" name="acompanantes">
+				<label for="acompanantes">¿Acompañantes?</label>
 			</div>
-			<span class="underline"></span>
-		</div>
-		<div class="radio-group-material">
-			<label class="radio-group-label">¿Tienes intolerancias alimentarias?</label>
-		  
-			<div class="radio-material">
-			  <input type="radio" id="opcionSi" name="intolerancias" value="Sí" required onchange="toggleIntolerancias(true)">
-			  <label for="opcionSi">Sí</label>
-			  <span class="radio-indicator"></span>
+			<div class="radio-group-material">
+				<label class="radio-group-label">¿Usarás autobús?</label>
+				
+				<div class="radio-options">
+					<div class="radio-material">
+						<input type="radio" id="opcionSi" name="autobus" value="Sí">
+						<label for="opcionSi">Sí</label>
+						<span class="radio-indicator"></span>
+					</div>
+					
+					<div class="radio-material">
+						<input type="radio" id="opcionNo" name="autobus" value="No">
+						<label for="opcionNo">No</label>
+						<span class="radio-indicator"></span>
+					</div>
+				</div>
 			</div>
-		  
-			<div class="radio-material">
-			  <input type="radio" id="opcionNo" name="intolerancias" value="No" onchange="toggleIntolerancias(false)">
-			  <label for="opcionNo">No</label>
-			  <span class="radio-indicator"></span>
+			<div class="radio-group-material">
+				<label class="radio-group-label">¿Tienes intolerancias alimentarias?</label>
+				
+				<div class="radio-options">
+					<div class="radio-material">
+						<input type="radio" id="opcionSi" name="intolerancias" value="Sí" required onchange="toggleIntolerancias(true)">
+						<label for="opcionSi">Sí</label>
+						<span class="radio-indicator"></span>
+					</div>
+					
+					<div class="radio-material">
+						<input type="radio" id="opcionNo" name="intolerancias" value="No" onchange="toggleIntolerancias(false)">
+						<label for="opcionNo">No</label>
+						<span class="radio-indicator"></span>
+					</div>
+				</div>
 			</div>
-			<span class="underline"></span>
-		</div>
-		<div class="input-material" id="intolerancias-texto" style="display:none;">
-			<input type="text" id="detalle_intolerancias" name="detalle_intolerancias">
-			<label for="detalle_intolerancias">Especifica tus intolerancias *</label>
-			<span class="underline"></span>
-		</div>
-		<div class="textarea-material">
-			<textarea id="comentarios" name="comentarios"></textarea>
-			<label for="comentarios">Comentarios</label>
-			<span class="underline"></span>
-		</div>
-	    <button type="submit" class="button-material" id="submit-form">Enviar</button>
-	  </form>
-	  <div class="image-bottom">
-	  	<img src="./assets/img/mariDavi2.jpeg" />
-	  </div>
+			<div class="input-material" id="intolerancias-texto" style="display:none;">
+				<input type="text" id="detalle_intolerancias" name="detalle_intolerancias">
+				<label for="detalle_intolerancias">Especifica tus intolerancias</label>
+			</div>
+			<div class="textarea-material">
+				<textarea id="comentarios" name="comentarios" rows="3"></textarea>
+				<label for="comentarios">Comentarios</label>
+			</div>
+			<button type="submit" class="mat-button-solid">Confirmar</button>
+		</form>
 	</div>
- </div>
+  </div>
+
 
   <script type="text/javascript" src="./index.js"></script>
+  <script type="text/javascript" src="./countdown.js"></script>
+  <script type="text/javascript" src="./slider.js"></script>
+  <script type="text/javascript" src="./material.js"></script>
 </body>
 </html>
