@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 redirect: 'follow'
             });
             if (response.ok) {
-                showToast('Gracias por confirmar tu asistencia');
+                showToast('¡Gracias! Nos vemos pronto <i class="fa-solid fa-heart thankyou"></i>');
                 form.reset();
                 hideForm();
             } else {

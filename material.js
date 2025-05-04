@@ -61,7 +61,7 @@ function showToast(mensaje, accionTexto, accionCallback) {
   const mensajeElemento = toast.querySelector('.toast-message');
   const accionBoton = toast.querySelector('.toast-action');
 
-  mensajeElemento.textContent = mensaje;
+  mensajeElemento.innerHTML = mensaje;
 
   if (accionTexto && accionCallback) {
     accionBoton.textContent = accionTexto;

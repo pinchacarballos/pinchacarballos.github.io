@@ -403,7 +403,7 @@ body {
   }
   .image {
     width: 20%;
-    max-width: 150px;
+    max-width: 140px;
   }
 }
 
@@ -417,4 +417,10 @@ body {
   flex-direction: column;
   align-items: center;
   opacity: 0.6; 
+}
+
+.thankyou {
+  color: red;
+  padding-left: 8px;
+  font-size: 20px;
 }
