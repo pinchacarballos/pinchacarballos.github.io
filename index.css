@@ -185,6 +185,10 @@ body {
   align-items: center;
   background-color: var(--text);
   padding-bottom: 24px;
+  @media(min-width: 640px) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
   .title {
     font-family: "Faculty Glyphic", sans-serif;
     color: var(--background);
@@ -215,6 +219,10 @@ body {
   align-items: center;
   background-color: var(--secondary);
   padding: 32px 16px;
+  @media(min-width: 640px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   .title {
     font-family: "Faculty Glyphic", sans-serif;
     color: var(--text);
@@ -242,6 +250,10 @@ body {
   align-items: center;
   background-color: var(--background);
   padding: 52px 0 0 0;
+  @media(min-width: 640px) {
+    padding-top: 72px;
+    padding-bottom: 60px;
+  }
   .title {
     font-family: "Faculty Glyphic", sans-serif;
     color: var(--text);
@@ -344,6 +356,10 @@ body {
   align-items: center;
   padding: 36px 0;
   background-color: var(--secondary);
+  @media(min-width: 640px) {
+    padding-top: 72px;
+    padding-bottom: 60px;
+  }
   .title {
     font-family: "Faculty Glyphic", sans-serif;
     font-size: 24px;
@@ -408,14 +424,13 @@ body {
 }
 
 .section-9 {
-  margin-top: 2rem;
-  padding-bottom: 6px;
+  padding-top: 52px;
+  padding-bottom: 20px;
   font-family: "Faculty Glyphic", sans-serif;
   font-size: 5px;
   letter-spacing: 2px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   opacity: 0.6; 
 }
 
