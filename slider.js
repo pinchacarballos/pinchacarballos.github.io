@@ -40,58 +40,41 @@ function prevSlide() {
     showSlide(currentIndex);
 }
 
-function goToSlide(index) {
-    currentIndex = index;
-    showSlide(currentIndex);
-}
+nextButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    nextSlide();
+});
+prevButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    prevSlide();
+});
 
-nextButton.addEventListener('click', nextSlide);
-prevButton.addEventListener('click', prevSlide);
-
-// indicators.forEach((indicator, index) => {
-//     indicator.addEventListener('click', () => {
-//         goToSlide(index);
-//     });
-// });
-
-// Mostrar la primera slide al cargar la página
 showSlide(currentIndex);
 
 if (carouselContainer) { // Solo añade los listeners si el contenedor existe
     carouselContainer.addEventListener('touchstart', (e) => {
-        // Guarda la posición X del primer toque (si hay múltiples toques)
         touchStartX = e.touches[0].clientX;
     });
 
     carouselContainer.addEventListener('touchmove', (e) => {
-        // Opcional: Prevenir el comportamiento por defecto del scroll si el carrusel
-        // es el objetivo principal de arrastre horizontal.
-        // e.preventDefault();
-
-        // Actualiza la posición X actual del toque
         touchEndX = e.touches[0].clientX;
     });
 
-    carouselContainer.addEventListener('touchend', () => {
-        // Calcula la distancia total arrastrada
+    carouselContainer.addEventListener('touchend', (e) => {
         const swipeDistance = touchStartX - touchEndX;
-
-        if (swipeDistance > swipeThreshold) {
-            // El usuario arrastró hacia la izquierda (desea ver la siguiente slide)
-            nextSlide();
-        } else if (swipeDistance < -swipeThreshold) {
-            // El usuario arrastró hacia la derecha (desea ver la slide anterior)
-            prevSlide();
+        if (touchEndX !== 0) {
+            if (swipeDistance > swipeThreshold) {
+                nextSlide();
+            } else if (swipeDistance < -swipeThreshold) {
+                prevSlide();
+            }
         }
 
-        // Reinicia las coordenadas de toque para el siguiente arrastre
         touchStartX = 0;
         touchEndX = 0;
     });
 
     carouselContainer.addEventListener('touchcancel', () => {
-        // En caso de que el evento táctil sea interrumpido (ej. llamada entrante),
-        // resetea las coordenadas para evitar comportamientos inesperados.
         touchStartX = 0;
         touchEndX = 0;
     });

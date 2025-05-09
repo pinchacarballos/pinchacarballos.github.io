@@ -437,9 +437,8 @@ body {
     padding: 16px 0 40px 0;
     text-align: center;
   }
-  .image {
-    width: 20%;
-    max-width: 140px;
+  .image-carb {
+    width: 9rem;
   }
 }
 
