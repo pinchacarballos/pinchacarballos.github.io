@@ -268,6 +268,26 @@ body {
     height: 300px;
     overflow: hidden;
     margin: 20px auto;
+    @media(min-width: 426px) {
+      height: 460px;
+      margin: 0;
+    }
+    @media(min-width: 769px) {
+      height: 600px;
+      margin: 0;
+    }
+    @media(min-width: 1025px) {
+      height: 760px;
+      margin: 0;
+    }
+    @media(min-width: 1441px) {
+      height: 1300px;
+      margin: 0;
+    }
+    @media(min-width: 2561px) {
+      height: 1600px;
+      margin: 0;
+    }
   }
 
   .carousel-slide {
@@ -328,7 +348,7 @@ body {
 
   .carousel-indicators {
       position: absolute;
-      bottom: 10px;
+      bottom: 10%;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
