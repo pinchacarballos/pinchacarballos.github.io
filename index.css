@@ -203,6 +203,7 @@ body {
     font-size: 32px;
     padding-top: 8px;
     padding-bottom: 24px;
+    text-align: center;
   }
   .text {
     padding: 8px;
@@ -240,6 +241,7 @@ body {
     line-height: 24px;
   }
   .subtitle {
+    text-align: center;
     font-family: "Bonheur Royale", cursive;
     font-size: 36px;
   }
