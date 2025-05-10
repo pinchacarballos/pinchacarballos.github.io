@@ -245,6 +245,9 @@ body {
     font-family: "Bonheur Royale", cursive;
     font-size: 36px;
   }
+  a {
+    margin: 20px 0;
+  }
 }
 
 .section-6 {
