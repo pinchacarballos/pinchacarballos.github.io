@@ -1,137 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MariDavilaboda</title>
-  <link rel="stylesheet" href="./index.css">
-  <link rel="stylesheet" href="./material.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Poppins:wght@200;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Faculty+Glyphic&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-</head>
-<body id="body">
-<div class="content">
-	<section class="section-1">
-		<div class="title">
-			Un amor de verano que se nos ha ido de las manos
-		</div>
-		<span class="hastag">#maridavilaboda</span>
-		<span class="hastag">#dimequemequieres</span>
-		<div class="confirm-container">
-			<button onclick="showForm()" class="mat-button" id="confirm-button">
-				Confirma tu asistencia
-	  		</button>
-		</div>
-	</section>
-	<section class="section-2">
-		<div class="countdown" id="countdown">
-			<div><span class="label" id="days">0</span><span class="label">días</span></div>
-			<div><span class="label" id="hours">0</span><span class="label">horas</span></div>
-			<div><span class="label" id="minutes">0</span><span class="label">min</span></div>
-			<div><span class="label" id="seconds">0</span><span class="label">seg</span></div>
-		</div>
-		<img class="photo" src="./assets/img/mariDavi1.jpeg" />
-	</section>
-	<section class="section-3">
-		<span class="date">18/10/25</span>
-		<div class="sections">
-			<div class="info">
-				<div class="icon">
-					<img class="image-icon" src="./assets/icons/iglesia.png" />
-				</div>
-				<span class="title">Ceremonia religiosa</span>
-				<span class="hour">12:45h</span>
-				<span class="location">Iglesia San Paio da Estrada</span>
-				<div class="location-button">
-					<a role="button" class="mat-button" href="https://maps.app.goo.gl/kf13pwKDWjj4VYok6" target="_blank">Ver ubicación</a>
-				</div>
-			</div>
-			<div class="info">
-				<div class="icon">
-					<img class="image-icon" src="./assets/icons/fiesta.png" />
-				</div>
-				<span class="title">Banquete y fiesta</span>
-				<span class="hour">15:00h</span>
-				<span class="location">Pazo A Toxeiriña</span>
-				<div class="location-button">
-					<a role="button" class="mat-button" href="https://maps.app.goo.gl/KWr6pmDUdyep3KbG7" target="_blank">Ver ubicación</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="section-4">
-		<span class="title">Autobuses</span>
-		<span class="subtitle">Para que sólo pienses en pasarlo bien</span>
-		<span class="text">desde Santiago a la iglesia a las 11:30h</span>
-		<span class="text">desde la iglesia al pazo</span>
-		<span class="text">desde el pazo a Santiago 23:00h y 02:00h</span>
-		<span class="text">(Horario estimado, pueden producirse cambios más adelante)</span>
-	</section>
-	<section class="section-10">
-		<img class="photo" src="./assets/img/mariDavi3.jpeg" />
-	</section>
-	<section class="section-5">
-		<span class="title">Si vienes de lejos</span>
-		<span class="text">Santiago de Compostela está muy bien comunicado mediante tren o avión<br/> <br/>Te recomendamos viajar allí, pues la oferta de alojamientos es amplia, y los autobuses saldrán y llegarán allí</span>
-		<span class="subtitle">Es nuestro centro de operaciones</span>
-		<a role="button" class="mat-button" href="./maridavilaboda.pdf" target="_blank">Ver guía</a>
-	</section>
-	<section class="section-6">
-		<span class="title">Alojamientos</span>
-		<div class="carousel-container">
-			<div class="carousel-slide">
-				<img src="./assets/img/1.png" alt="Imagen 1">
-				<span class="hotel-name">Hotel Plaza Obradoiro</span>
-				<a role="button" class="mat-button" href="https://maps.app.goo.gl/RURgZgZBcUtQ2XpE8" target="_blank">Ver hotel</a>
-			</div>
-			<div class="carousel-slide">
-				<img src="./assets/img/2.png" alt="Imagen 1">
-				<span class="hotel-name">Hotel Costa Vella</span>
-				<a role="button" class="mat-button" href="https://maps.app.goo.gl/qtXGr8Ds61ScmDd37" target="_blank">Ver hotel</a>
-			</div>
-			<div class="carousel-slide">
-				<img src="./assets/img/3.png" alt="Imagen 1">
-				<span class="hotel-name">Gran Hotel Los Abetos</span>
-				<a role="button" button class="mat-button" href="https://maps.app.goo.gl/waznX38jpxS84EuD6" target="_blank">Ver hotel</a>
-			</div>
-			<div class="carousel-slide">
-				<img src="./assets/img/4.png" alt="Imagen 1">
-				<span class="hotel-name">San Francisco Hotel Monumento</span>
-				<a role="button" button class="mat-button" href="https://maps.app.goo.gl/Qm6C3t26EUMzSiPm9" target="_blank">Ver hotel</a>
-			</div>
-			<div class="carousel-slide">
-				<img src="./assets/img/5.png" alt="Imagen 1">
-				<span class="hotel-name">Eurostars San Lázaro</span>
-				<a role="button" button class="mat-button" href="https://maps.app.goo.gl/zSciPgQheUEpYjQo7" target="_blank">Ver hotel</a>
-			</div>
-			<div class="carousel-slide">
-				<img src="./assets/img/6.png" alt="Imagen 1">
-				<span class="hotel-name">Hostal de los Reyes Católicos</span>
-				<a role="button" button class="mat-button" href="https://maps.app.goo.gl/ndjZb7GNbw6XzHJ69" target="_blank">Ver hotel</a>
-			</div>
-			<div class="carousel-slide">
-				<img src="./assets/img/7.png" alt="Imagen 1">
-				<span class="hotel-name">Hotel Compostela</span>
-				<a role="button" button class="mat-button" href="https://maps.app.goo.gl/rjCCZpDWzg9q5JJY6" target="_blank">Ver hotel</a>
-			</div>
-			<div class="carousel-slide">
-				<img src="./assets/img/8.png" alt="Imagen 1">
-				<span class="hotel-name">Hotel Virxe da Cerca</span>
-				<a role="button" button class="mat-button" href="https://maps.app.goo.gl/RFb7gLezvCqUJKzj9" target="_blank">Ver hotel</a>
-			</div>
-			<div class="carousel-slide">
-				<img src="./assets/img/9.png" alt="Imagen 1">
-				<span class="hotel-name">Hotel Eurostars Araguaney</span>
-				<a role="button" button class="mat-button" href="https://maps.app.goo.gl/iqoQMMB1F5NiuYQbA" target="_blank">Ver hotel</a>
-			</div>
-			<button class="prev-button">&#10094;</button>
-			<button class="next-button">&#10095;</button>
 
-			<!-- <div class="carousel-indicators">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>MariDavilaboda</title>
+	<link rel="stylesheet" href="./index.css">
+	<link rel="stylesheet" href="./material.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cookie&family=Poppins:wght@200;600&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Faculty+Glyphic&display=swap"
+		rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body id="body">
+	<div class="content">
+		<section class="section-1">
+			<div class="title">
+				Un amor de verano que se nos ha ido de las manos
+			</div>
+			<span class="hastag">#maridavilaboda</span>
+			<span class="hastag">#dimequemequieres</span>
+			<div class="confirm-container">
+				<button onclick="showForm()" class="mat-button" id="confirm-button">
+					Confirma tu asistencia
+				</button>
+			</div>
+		</section>
+		<section class="section-2">
+			<div class="countdown" id="countdown">
+				<div><span class="label" id="days">0</span><span class="label">días</span></div>
+				<div><span class="label" id="hours">0</span><span class="label">horas</span></div>
+				<div><span class="label" id="minutes">0</span><span class="label">min</span></div>
+				<div><span class="label" id="seconds">0</span><span class="label">seg</span></div>
+			</div>
+			<img class="photo" src="./assets/img/mariDavi1.jpeg" />
+		</section>
+		<section class="section-3">
+			<span class="date">18/10/25</span>
+			<div class="sections">
+				<div class="info">
+					<div class="icon">
+						<img class="image-icon" src="./assets/icons/iglesia.png" />
+					</div>
+					<span class="title">Ceremonia religiosa</span>
+					<span class="hour">12:45h</span>
+					<span class="location">Iglesia San Paio da Estrada</span>
+					<div class="location-button">
+						<a role="button" class="mat-button" href="https://maps.app.goo.gl/kf13pwKDWjj4VYok6"
+							target="_blank">Ver ubicación</a>
+					</div>
+				</div>
+				<div class="info">
+					<div class="icon">
+						<img class="image-icon" src="./assets/icons/fiesta.png" />
+					</div>
+					<span class="title">Banquete y fiesta</span>
+					<span class="hour">15:00h</span>
+					<span class="location">Pazo A Toxeiriña</span>
+					<div class="location-button">
+						<a role="button" class="mat-button" href="https://maps.app.goo.gl/KWr6pmDUdyep3KbG7"
+							target="_blank">Ver ubicación</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section-4">
+			<span class="title">Autobuses</span>
+			<span class="subtitle">Para que sólo pienses en pasarlo bien</span>
+			<span class="text">desde Santiago a la iglesia a las 12:15h (Parada en <a
+					href="https://maps.app.goo.gl/cvFHM1pgCnLGP7EH9" class="location-link" target="_blank">Calle de La
+					Rosa</a>)</span>
+			<span class="text">desde la iglesia al pazo</span>
+			<span class="text">desde el pazo a Santiago 23:00h (1 bus) y 02:00h (2 buses)</span>
+			<span class="text">(Horario estimado, pueden producirse cambios más adelante)</span>
+		</section>
+		<section class="section-10">
+			<img class="photo" src="./assets/img/mariDavi3.jpeg" />
+		</section>
+		<section class="section-5">
+			<span class="title">Si vienes de lejos</span>
+			<span class="text">Santiago de Compostela está muy bien comunicado mediante tren o avión<br /> <br />Te
+				recomendamos viajar allí, pues la oferta de alojamientos es amplia, y los autobuses saldrán y llegarán
+				allí</span>
+			<span class="subtitle">Es nuestro centro de operaciones</span>
+			<a role="button" class="mat-button" href="./maridavilaboda.pdf" target="_blank">Ver guía</a>
+		</section>
+		<section class="section-6">
+			<span class="title">Alojamientos</span>
+			<div class="carousel-container">
+				<div class="carousel-slide">
+					<img src="./assets/img/1.png" alt="Imagen 1">
+					<span class="hotel-name">Hotel Plaza Obradoiro</span>
+					<a role="button" class="mat-button" href="https://maps.app.goo.gl/RURgZgZBcUtQ2XpE8"
+						target="_blank">Ver hotel</a>
+				</div>
+				<div class="carousel-slide">
+					<img src="./assets/img/2.png" alt="Imagen 1">
+					<span class="hotel-name">Hotel Costa Vella</span>
+					<a role="button" class="mat-button" href="https://maps.app.goo.gl/qtXGr8Ds61ScmDd37"
+						target="_blank">Ver hotel</a>
+				</div>
+				<div class="carousel-slide">
+					<img src="./assets/img/3.png" alt="Imagen 1">
+					<span class="hotel-name">Gran Hotel Los Abetos</span>
+					<a role="button" button class="mat-button" href="https://maps.app.goo.gl/waznX38jpxS84EuD6"
+						target="_blank">Ver hotel</a>
+				</div>
+				<div class="carousel-slide">
+					<img src="./assets/img/4.png" alt="Imagen 1">
+					<span class="hotel-name">San Francisco Hotel Monumento</span>
+					<a role="button" button class="mat-button" href="https://maps.app.goo.gl/Qm6C3t26EUMzSiPm9"
+						target="_blank">Ver hotel</a>
+				</div>
+				<div class="carousel-slide">
+					<img src="./assets/img/5.png" alt="Imagen 1">
+					<span class="hotel-name">Eurostars San Lázaro</span>
+					<a role="button" button class="mat-button" href="https://maps.app.goo.gl/zSciPgQheUEpYjQo7"
+						target="_blank">Ver hotel</a>
+				</div>
+				<div class="carousel-slide">
+					<img src="./assets/img/6.png" alt="Imagen 1">
+					<span class="hotel-name">Hostal de los Reyes Católicos</span>
+					<a role="button" button class="mat-button" href="https://maps.app.goo.gl/ndjZb7GNbw6XzHJ69"
+						target="_blank">Ver hotel</a>
+				</div>
+				<div class="carousel-slide">
+					<img src="./assets/img/7.png" alt="Imagen 1">
+					<span class="hotel-name">Hotel Compostela</span>
+					<a role="button" button class="mat-button" href="https://maps.app.goo.gl/rjCCZpDWzg9q5JJY6"
+						target="_blank">Ver hotel</a>
+				</div>
+				<div class="carousel-slide">
+					<img src="./assets/img/8.png" alt="Imagen 1">
+					<span class="hotel-name">Hotel Virxe da Cerca</span>
+					<a role="button" button class="mat-button" href="https://maps.app.goo.gl/RFb7gLezvCqUJKzj9"
+						target="_blank">Ver hotel</a>
+				</div>
+				<div class="carousel-slide">
+					<img src="./assets/img/9.png" alt="Imagen 1">
+					<span class="hotel-name">Hotel Eurostars Araguaney</span>
+					<a role="button" button class="mat-button" href="https://maps.app.goo.gl/iqoQMMB1F5NiuYQbA"
+						target="_blank">Ver hotel</a>
+				</div>
+				<button class="prev-button">&#10094;</button>
+				<button class="next-button">&#10095;</button>
+
+				<!-- <div class="carousel-indicators">
 				<button class="indicator active"></button>
 				<button class="indicator"></button>
 				<button class="indicator"></button>
@@ -139,108 +158,112 @@
 				<button class="indicator"></button>
 				<button class="indicator"></button>
 			</div> -->
-		</div>
-	</section>
-	<section class="section-7">
-		<span class="title">Regalo</span>
-		<span class="subtitle">Si quieres hacernos un regalo, puedes sumar kilómetros a nuestra luna de miel</span>
-		<div class="iban">
-			<span class="text" id="ibanText">IBAN ES56 1583 0001 1890 1967 2691</span>
-			<button class="copy-button" onclick="copyToClipboard('ibanText')">
-				<i class="fa-regular fa-clipboard"></i> 
-			</button>
-		</div>
-	</section>
-	<section class="section-11">
-		<img class="photo" src="./assets/img/family.jpeg" />
-	</section>
-	<section class="section-8">
-		<img class="image-carb" src="./assets/img/carb.png" />
-		<span class="title">Esperamos que puedas acompañarnos</span>
-		<button class="mat-button-solid" onclick="showForm()">Confirma tu asistencia</button>
-	</section>
+			</div>
+		</section>
+		<section class="section-7">
+			<span class="title">Regalo</span>
+			<span class="subtitle">Si quieres hacernos un regalo, puedes sumar kilómetros a nuestra luna de miel</span>
+			<div class="iban">
+				<span class="text" id="ibanText">IBAN ES56 1583 0001 1890 1967 2691</span>
+				<button class="copy-button" onclick="copyToClipboard('ibanText')">
+					<i class="fa-regular fa-clipboard"></i>
+				</button>
+			</div>
+		</section>
+		<section class="section-11">
+			<img class="photo" src="./assets/img/family.jpeg" />
+		</section>
+		<section class="section-8">
+			<img class="image-carb" src="./assets/img/carb.png" />
+			<span class="title">Esperamos que puedas acompañarnos</span>
+			<button class="mat-button-solid" onclick="showForm()">Confirma tu asistencia</button>
+		</section>
 
-	<section class="section-9">
-		<div class="flags">
-			<img src="./assets/icons/andalucia.png" />
-			<img src="./assets/icons/galicia.png" />
-		</div>
-		<span class="title">Feito con amor dende Galiza <i class="fas fa-heart"></i></span>
-	</section>  
-  </div>
- 
-  <div id="popup" style="display:none;">
-	<div class="popup-content">
-		<div class="header">
-			<span class="title">Confirma tu asistencia</span>
-			<button onclick="hideForm()" class="icon-button">
-				<i class="fa-solid fa-xmark"></i>
-			</button>
-		</div>			
-		<form id="rsvp-form">
-			<div class="input-material">
-				<input type="text" id="nombre" name="nombre">
-				<label for="nombre">Nombre y apellidos</label>
+		<section class="section-9">
+			<div class="flags">
+				<img src="./assets/icons/andalucia.png" />
+				<img src="./assets/icons/galicia.png" />
 			</div>
-			<div class="input-material">
-				<input type="text" id="nombre" name="acompanantes">
-				<label for="acompanantes">¿Acompañantes?</label>
-			</div>
-			<div class="radio-group-material">
-				<label class="radio-group-label">¿Usarás autobús?</label>
-				
-				<div class="radio-options">
-					<div class="radio-material">
-						<input type="radio" id="opcionSi" name="autobus" value="Sí">
-						<label for="opcionSi">Sí</label>
-						<span class="radio-indicator"></span>
-					</div>
-					
-					<div class="radio-material">
-						<input type="radio" id="opcionNo" name="autobus" value="No">
-						<label for="opcionNo">No</label>
-						<span class="radio-indicator"></span>
-					</div>
-				</div>
-			</div>
-			<div class="radio-group-material">
-				<label class="radio-group-label">¿Tienes intolerancias alimentarias? ¿Vegetariano? ¿Embarazada?</label>
-				
-				<div class="radio-options">
-					<div class="radio-material">
-						<input type="radio" id="opcionSi" name="intolerancias" value="Sí" required onchange="toggleIntolerancias(true)">
-						<label for="opcionSi">Sí</label>
-						<span class="radio-indicator"></span>
-					</div>
-					
-					<div class="radio-material">
-						<input type="radio" id="opcionNo" name="intolerancias" value="No" onchange="toggleIntolerancias(false)">
-						<label for="opcionNo">No</label>
-						<span class="radio-indicator"></span>
-					</div>
-				</div>
-			</div>
-			<div class="input-material" id="intolerancias-texto" style="display:none;">
-				<input type="text" id="detalle_intolerancias" name="detalle_intolerancias">
-				<label for="detalle_intolerancias">Especifica tus intolerancias/preferencias</label>
-			</div>
-			<div class="textarea-material">
-				<textarea id="comentarios" name="comentarios" rows="3"></textarea>
-				<label for="comentarios">Comentarios</label>
-			</div>
-			<button type="submit" class="mat-button-solid">Enviar</button>
-		</form>
+			<span class="title">Feito con amor dende Galiza <i class="fas fa-heart"></i></span>
+		</section>
 	</div>
-  </div>
 
-  <div id="toast-container" class="toast">
-	<span class="toast-message"></span>
-	<button class="toast-action"></button>
-  </div>
+	<div id="popup" style="display:none;">
+		<div class="popup-content">
+			<div class="header">
+				<span class="title">Confirma tu asistencia</span>
+				<button onclick="hideForm()" class="icon-button">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+			</div>
+			<form id="rsvp-form">
+				<div class="input-material">
+					<input type="text" id="nombre" name="nombre">
+					<label for="nombre">Nombre y apellidos</label>
+				</div>
+				<div class="input-material">
+					<input type="text" id="nombre" name="acompanantes">
+					<label for="acompanantes">¿Acompañantes?</label>
+				</div>
+				<div class="radio-group-material">
+					<label class="radio-group-label">¿Usarás autobús?</label>
 
-  <script type="text/javascript" src="./countdown.js"></script>
-  <script type="text/javascript" src="./slider.js"></script>
-  <script type="text/javascript" src="./material.js"></script>
-  <script type="text/javascript" src="./index.js"></script>
+					<div class="radio-options">
+						<div class="radio-material">
+							<input type="radio" id="opcionSi" name="autobus" value="Sí">
+							<label for="opcionSi">Sí</label>
+							<span class="radio-indicator"></span>
+						</div>
+
+						<div class="radio-material">
+							<input type="radio" id="opcionNo" name="autobus" value="No">
+							<label for="opcionNo">No</label>
+							<span class="radio-indicator"></span>
+						</div>
+					</div>
+				</div>
+				<div class="radio-group-material">
+					<label class="radio-group-label">¿Tienes intolerancias alimentarias? ¿Vegetariano?
+						¿Embarazada?</label>
+
+					<div class="radio-options">
+						<div class="radio-material">
+							<input type="radio" id="opcionSi" name="intolerancias" value="Sí" required
+								onchange="toggleIntolerancias(true)">
+							<label for="opcionSi">Sí</label>
+							<span class="radio-indicator"></span>
+						</div>
+
+						<div class="radio-material">
+							<input type="radio" id="opcionNo" name="intolerancias" value="No"
+								onchange="toggleIntolerancias(false)">
+							<label for="opcionNo">No</label>
+							<span class="radio-indicator"></span>
+						</div>
+					</div>
+				</div>
+				<div class="input-material" id="intolerancias-texto" style="display:none;">
+					<input type="text" id="detalle_intolerancias" name="detalle_intolerancias">
+					<label for="detalle_intolerancias">Especifica tus intolerancias/preferencias</label>
+				</div>
+				<div class="textarea-material">
+					<textarea id="comentarios" name="comentarios" rows="3"></textarea>
+					<label for="comentarios">Comentarios</label>
+				</div>
+				<button type="submit" class="mat-button-solid">Enviar</button>
+			</form>
+		</div>
+	</div>
+
+	<div id="toast-container" class="toast">
+		<span class="toast-message"></span>
+		<button class="toast-action"></button>
+	</div>
+
+	<script type="text/javascript" src="./countdown.js"></script>
+	<script type="text/javascript" src="./slider.js"></script>
+	<script type="text/javascript" src="./material.js"></script>
+	<script type="text/javascript" src="./index.js"></script>
 </body>
+
 </html>

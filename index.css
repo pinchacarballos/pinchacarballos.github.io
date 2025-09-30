@@ -17,24 +17,27 @@ body {
 }
 
 #popup {
-  position:fixed; 
-  top:0; 
-  left:0; 
-  width:100%; 
-  height:100%; 
-  z-index:1000; 
-  overflow-y:auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  overflow-y: auto;
   background-color: var(--background);
+
   .popup-content {
     display: flex;
-    flex-direction:column; 
+    flex-direction: column;
     padding: 16px;
     gap: 16px;
+
     .header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 8px;
+
       .title {
         font-family: "Faculty Glyphic", sans-serif;
         font-size: 12px;
@@ -42,18 +45,20 @@ body {
         letter-spacing: 8px;
         color: var(--text);
       }
+
       i {
         color: var(--text);
       }
     }
-    .radio-material input[type="radio"]:checked + label + .radio-indicator::before {
+
+    .radio-material input[type="radio"]:checked+label+.radio-indicator::before {
       background-color: var(--text);
     }
   }
 }
 
 #rsvp-form {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   gap: 24px;
 }
@@ -65,6 +70,7 @@ body {
   align-items: center;
   background-color: var(--background);
   padding: 32px 16px 0px 16px;
+
   .title {
     text-transform: uppercase;
     width: 100%;
@@ -75,12 +81,14 @@ body {
     color: var(--text);
     padding: 16px;
   }
+
   .hastag {
     color: var(--secondary);
     font-size: 40px;
     line-height: 36px;
     font-family: "Bonheur Royale", cursive;
   }
+
   .confirm-container {
     padding: 40px 0;
   }
@@ -91,22 +99,26 @@ body {
   flex-direction: column;
   background-color: var(--background);
   gap: 32px;
+
   .photo {
     width: 100%;
     max-height: 700px;
     object-fit: cover;
     object-position: 100% 55%;
   }
+
   .countdown {
     font-family: "Faculty Glyphic", sans-serif;
     font-size: 1.6rem;
     display: flex;
     justify-content: center;
     gap: 16px;
+
     div {
       display: flex;
       flex-direction: column;
       align-items: center;
+
       .label {
         font-size: 1.6rem;
         font-weight: bold;
@@ -122,6 +134,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: var(--background);
+
   .date {
     display: flex;
     padding: 24px 0;
@@ -129,32 +142,40 @@ body {
     font-size: 48px;
     color: var(--text);
   }
+
   .sections {
     display: flex;
     flex-direction: column;
+
     @media(min-width: 600px) {
       flex-direction: row;
       justify-content: center;
     }
+
     .info {
       width: 100%;
+
       @media(min-width: 600px) {
         width: 50%;
       }
+
       display: flex;
       flex-direction: column;
       align-items: center;
+
       .title {
         font-family: "Faculty Glyphic", sans-serif;
         padding: 24px 0;
         font-size: 28px;
         color: var(--text);
       }
+
       .hour {
         font-family: "Faculty Glyphic", sans-serif;
         font-size: 28px;
         color: var(--text);
       }
+
       .location {
         font-family: "Faculty Glyphic", sans-serif;
         font-size: 18px;
@@ -165,30 +186,36 @@ body {
         padding: 16px;
         width: 90%;
       }
+
       .icon {
         display: flex;
         justify-content: center;
         max-height: 125px;
+
         .image-icon {
           width: 25%;
         }
       }
+
       .location-button {
         padding-bottom: 60px;
       }
     }
   }
 }
+
 .section-4 {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--background);
   padding-bottom: 24px;
+
   @media(min-width: 640px) {
     padding-top: 40px;
     padding-bottom: 60px;
   }
+
   .title {
     font-family: "Faculty Glyphic", sans-serif;
     color: var(--text);
@@ -197,6 +224,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 8px;
   }
+
   .subtitle {
     font-family: "Bonheur Royale", cursive;
     color: var(--text);
@@ -205,6 +233,7 @@ body {
     padding-bottom: 24px;
     text-align: center;
   }
+
   .text {
     padding: 8px;
     font-family: "Faculty Glyphic", sans-serif;
@@ -212,6 +241,11 @@ body {
     letter-spacing: 2px;
     font-size: smaller;
     text-align: center;
+  }
+
+  .location-link {
+    text-decoration: none;
+    color: var(--secondary);
   }
 }
 
@@ -221,10 +255,12 @@ body {
   align-items: center;
   background-color: var(--secondary);
   padding: 32px 16px;
+
   @media(min-width: 640px) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
+
   .title {
     font-family: "Faculty Glyphic", sans-serif;
     color: var(--text);
@@ -232,6 +268,7 @@ body {
     font-size: 24px;
     letter-spacing: 2px;
   }
+
   .text {
     padding: 16px;
     text-align: center;
@@ -240,11 +277,13 @@ body {
     letter-spacing: 1px;
     line-height: 24px;
   }
+
   .subtitle {
     text-align: center;
     font-family: "Bonheur Royale", cursive;
     font-size: 36px;
   }
+
   a {
     margin: 20px 0;
   }
@@ -256,13 +295,16 @@ body {
   align-items: center;
   background-color: var(--background);
   padding: 52px 0 0 0;
+
   @media(min-width: 640px) {
     padding-top: 72px;
     padding-bottom: 60px;
   }
+
   @media(min-width: 426px) {
     gap: 32px;
   }
+
   .title {
     font-family: "Faculty Glyphic", sans-serif;
     color: var(--text);
@@ -270,32 +312,39 @@ body {
     text-transform: uppercase;
     letter-spacing: 4px;
   }
+
   .carousel-container {
     position: relative;
     width: 100%;
     height: 300px;
     overflow: hidden;
     margin: 20px auto;
+
     @media(min-width: 426px) {
       height: 460px;
       margin: 0;
     }
+
     @media(min-width: 769px) {
       height: 600px;
       margin: 0;
     }
+
     @media(min-width: 1025px) {
       height: 760px;
       margin: 0;
     }
+
     @media(min-width: 1441px) {
       height: 1000px;
       margin: 0;
     }
+
     @media(min-width: 1921px) {
       height: 1300px;
       margin: 0;
     }
+
     @media(min-width: 2561px) {
       height: 1600px;
       margin: 0;
@@ -303,82 +352,87 @@ body {
   }
 
   .carousel-slide {
-      position: absolute;
-      top: 0;
-      left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
       width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 0.6s ease-in-out;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      img {
-        width: 100%;
-        object-fit: cover;
-      }
-      .hotel-name {
-        padding: 16px 0;
-        font-family: "Faculty Glyphic", sans-serif;
-        font-size: 20px;
-      }
-      .mat-button {
-        z-index: 1;
-      }
+      object-fit: cover;
+    }
+
+    .hotel-name {
+      padding: 16px 0;
+      font-family: "Faculty Glyphic", sans-serif;
+      font-size: 20px;
+    }
+
+    .mat-button {
+      z-index: 1;
+    }
   }
 
   .carousel-slide.active {
-      opacity: 1;
+    opacity: 1;
   }
 
-  .prev-button, .next-button {
-      position: absolute;
-      bottom: 20px;
-      transform: translateY(-50%);
-      font-size: 18px;
-      padding: 12px 15px;
-      background: var(--text);
-      color: white;
-      border: none;
-      cursor: pointer;
-      z-index: 10;
-      opacity: 0.8;
-      transition: opacity 0.3s ease;
+  .prev-button,
+  .next-button {
+    position: absolute;
+    bottom: 20px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    padding: 12px 15px;
+    background: var(--text);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
   }
 
-  .prev-button:hover, .next-button:hover {
-      opacity: 1;
+  .prev-button:hover,
+  .next-button:hover {
+    opacity: 1;
   }
 
   .prev-button {
-      left: 10px;
+    left: 10px;
   }
 
   .next-button {
-      right: 10px;
+    right: 10px;
   }
 
   .carousel-indicators {
-      position: absolute;
-      bottom: 10%;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
   }
 
   .indicator {
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background-color: rgba(0, 0, 0, 0.5);
-      border: none;
-      margin: 0 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
 
   .indicator.active {
-      background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.9);
   }
 }
 
@@ -388,16 +442,19 @@ body {
   align-items: center;
   padding: 36px 0;
   background-color: var(--secondary);
+
   @media(min-width: 640px) {
     padding-top: 72px;
     padding-bottom: 60px;
   }
+
   .title {
     font-family: "Faculty Glyphic", sans-serif;
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 8px;
   }
+
   .subtitle {
     text-align: center;
     font-family: "Faculty Glyphic", sans-serif;
@@ -405,35 +462,40 @@ body {
     letter-spacing: 3px;
     padding: 16px 20px;
   }
+
   .text {
     font-family: "Faculty Glyphic", sans-serif;
     font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
-   .iban {
+
+  .iban {
     display: flex;
     align-items: center;
     padding-top: 16px;
 
   }
+
   .copy-button {
     padding: 0 0 0 4px;
     color: rgba(0, 0, 0, 0.54);
     cursor: pointer;
     border: none;
-    background-color: transparent; 
+    background-color: transparent;
   }
-   .copy-button i {
+
+  .copy-button i {
     font-size: 1.2em;
-     color: inherit;
+    color: inherit;
   }
+
   .copy-button:hover {
-    opacity: 0.7; 
+    opacity: 0.7;
   }
 
   .copy-button:active {
-    opacity: 0.9; 
+    opacity: 0.9;
   }
 }
 
@@ -442,6 +504,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 32px;
+
   .title {
     font-family: "Faculty Glyphic", sans-serif;
     font-size: 14px;
@@ -449,6 +512,7 @@ body {
     padding: 16px 0 40px 0;
     text-align: center;
   }
+
   .image-carb {
     width: 9rem;
   }
@@ -465,13 +529,15 @@ body {
   justify-content: center;
   flex-direction: column;
   opacity: 0.6;
+
   .flags {
     display: flex;
     gap: 8px;
+
     img {
       width: 10px;
     }
-  } 
+  }
 }
 
 .thankyou {
@@ -483,11 +549,13 @@ body {
 .section-10 {
   display: flex;
   flex-direction: column;
+
   .photo {
     width: 100%;
     max-height: 700px;
     object-fit: cover;
     object-position: 100% 15%;
+
     @media(min-width: 1920px) {
       object-position: 100% 30%;
     }
@@ -497,11 +565,13 @@ body {
 .section-11 {
   display: flex;
   flex-direction: column;
+
   .photo {
     width: 100%;
     max-height: 700px;
     object-fit: cover;
     object-position: 100% 50;
+
     @media(min-width: 1920px) {
       object-position: 100% 35%;
     }
