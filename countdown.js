@@ -4,8 +4,9 @@ const countdown = () => {
     const diff = endDate - now;
 
     if (diff <= 0) {
-    document.getElementById("countdown").innerHTML = "¡Ya está disponible!";
-    return;
+        document.getElementById("countdown").innerHTML = "";
+        document.getElementById("countdown").setAttribute('style', 'display: none');
+        return;
     }
 
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
